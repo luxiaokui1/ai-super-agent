@@ -188,6 +188,3 @@ Optional configurations (uncomment in `application.yml` as needed):
 - **MCP Client** — For Model Context Protocol services
 - **Ollama** — For local LLM deployment
 
-## License
-
-This project is for educational and portfolio purposes.
