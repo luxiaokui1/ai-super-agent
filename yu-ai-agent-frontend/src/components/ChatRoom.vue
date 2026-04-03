@@ -26,7 +26,7 @@
             <div class="message-time">{{ formatTime(msg.time) }}</div>
           </div>
           <div class="avatar user-avatar">
-            <div class="avatar-placeholder">我</div>
+            <div class="avatar-placeholder">Me</div>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
         <textarea 
           v-model="inputMessage" 
           @keydown.enter.prevent="sendMessage"
-          placeholder="请输入消息..." 
+          placeholder="Type a message..." 
           class="input-box"
           :disabled="connectionStatus === 'connecting'"
         ></textarea>
@@ -46,7 +46,7 @@
           @click="sendMessage" 
           class="send-button"
           :disabled="connectionStatus === 'connecting' || !inputMessage.trim()"
-        >发送</button>
+        >Send</button>
       </div>
     </div>
   </div>
@@ -94,7 +94,7 @@ const sendMessage = () => {
 // 格式化时间
 const formatTime = (timestamp) => {
   const date = new Date(timestamp)
-  return date.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+  return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
 }
 
 // 自动滚动到底部
